@@ -1,0 +1,177 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    height: 100%; 
+    overflow-y: auto; /* Allow vertical scrolling */
+}
+
+/* Background Video */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the full screen without distortion */
+    z-index: -1; /* Place the video behind content */
+}
+
+/* Overlay Content */
+.overlay-content {
+    position: relative;
+    z-index: 1; /* Place content above the video */
+    color: #fff;
+    padding-bottom: 20px; /* Prevent content from being cut off at the bottom */
+}
+
+/* Title Section */
+.title-section {
+    background-color: rgba(0, 0, 0, 0.7); /* Match Contact Details background */
+    text-align: center;
+    padding: 20px 0;
+}
+
+.title-section h1 {
+    font-size: 3em; /* Slightly increased font size */
+    text-transform: uppercase;
+    margin: 0;
+    color: #fff;
+}
+
+/* Contact Container */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+/* Left Grid Styling */
+.contact-left {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.details-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5em; /* Same size as Scan to Contact Us */
+}
+
+/* Form Fields */
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input, form select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1em;
+    background-color: #fff;
+}
+
+/* Error Messages */
+.error-msg {
+    color: red;
+    font-size: 0.9em;
+    margin-top: -15px;
+    margin-bottom: 15px;
+}
+
+/* Submit Button */
+form button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #00b3b3;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+    border-radius: 5px;
+    width: 100%;
+}
+
+form button:hover {
+    background-color: #009999;
+}
+
+/* Right Grid Styling */
+.contact-right {
+    background-color: rgba(0, 0, 0, 0.7); /* Same as Left Grid */
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.scan-title {
+    font-size: 2.5em; /* Same size as Contact Details title */
+    margin-bottom: 20px;
+    text-transform: capitalize; /* Only first letter capitalized */
+    color: #fff;
+}
+
+.qr-photo {
+    max-width: 60%; /* Reduced size */
+    height: auto;
+    margin: 0 auto 20px;
+    display: block;
+}
+
+.or-text {
+    margin: 20px 0;
+    font-size: 2em; /* Increased font size */
+    font-weight: bold;
+    color: #fff;
+}
+
+.contact-button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #00b3b3;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+.contact-button:hover {
+    background-color: #009999;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .scan-title {
+        font-size: 2em;
+    }
+
+    .or-text {
+        font-size: 1.5em;
+    }
+
+    .qr-photo {
+        max-width: 50%;
+    }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moneymagnet</title>
+    <!-- Correct path to the CSS file in the same folder -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Splash Screen -->
+    <div id="splash-screen">
+        <h1>Moneymagnet</h1>
+    </div>
+
+    <!-- Main Content (Hidden initially) -->
+    <div id="main-content" class="hidden">
+        <button id="signup-btn">Sign Up</button>
+        <button id="login-btn">Login</button>
+
+        <!-- Sign-Up Form (Hidden initially) -->
+        <div id="signup-form" class="form hidden">
+            <h2>Sign Up</h2>
+            <input type="text" id="name" placeholder="Full Name" />
+            <input type="email" id="email" placeholder="Email" />
+            <input type="password" id="password" placeholder="Password" />
+            <button type="submit">Submit</button>
+        </div>
+
+        <!-- Login Form (Hidden initially) -->
+        <div id="login-form" class="form hidden">
+            <h2>Login</h2>
+            <input type="email" id="login-email" placeholder="Email" />
+            <input type="password" id="login-password" placeholder="Password" />
+            <button type="submit">Login</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

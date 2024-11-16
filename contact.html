@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+    <!-- Background Video -->
+    <video autoplay muted loop id="background-video">
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Overlay Content -->
+    <div class="overlay-content">
+
+        <!-- Title Section -->
+        <section class="title-section">
+            <h1>Contact</h1>
+        </section>
+
+        <!-- Contact Container -->
+        <div class="contact-container">
+            <!-- Left Grid: Form -->
+            <div class="contact-left">
+                <h2 class="details-title">Contact Details</h2>
+                <form id="contactForm" action="/submit-contact" method="POST">
+                    <label for="name">Full Name <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    
+                    <label for="mobile">Mobile Number <span class="required">*</span></label>
+                    <input type="text" id="mobile" name="mobile" placeholder="Enter your mobile number" maxlength="10" required>
+                    <p id="mobileError" class="error-msg" style="display: none;">Please enter a valid 10-digit mobile number.</p>
+
+                    <label for="email">Email <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    
+                    <label for="interest">Interest</label>
+                    <select id="interest" name="interest">
+                        <option value="expert-advice">Expert Advice</option>
+                        <option value="investment-planning">Investment Planning</option>
+                    </select>
+                    
+                    <label for="aadhar">Aadhar Number</label>
+                    <input type="text" id="aadhar" name="aadhar" placeholder="Enter your Aadhar number">
+
+                    <label for="pan">PAN Number</label>
+                    <input type="text" id="pan" name="pan" placeholder="Enter your PAN number">
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+
+            <!-- Right Grid -->
+            <div class="contact-right">
+                <h2 class="scan-title">Scan to contact us</h2>
+                <img src="myphoto.jpeg" alt="Scan QR Code" class="qr-photo">
+                <p class="or-text">OR</p>
+                <a href="https://wa.me/message/ECVH6NADTCZGB1" target="_blank">
+                    <button class="contact-button">Click Here</button>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Listen for form submission
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            const formData = new FormData(this);
+
+            // Send the form data to the server via POST request
+            fetch('/submit-contact', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                // Show the success alert and refresh the page
+                alert('Submitted');
+                location.reload(); // Refresh the page
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Error submitting the form');
+            });
+        });
+    </script>
+
+</body>
+</html>

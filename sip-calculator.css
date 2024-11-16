@@ -1,0 +1,104 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background-color: #ffffff;
+}
+
+/* Hero Section with Video */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+}
+
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the full screen without distortion */
+    z-index: -1;
+}
+
+/* Content inside the Hero Section */
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1; /* Ensure the content stays above the video */
+    width: 100%; /* Full width */
+}
+
+/* Calculator Container */
+.calculator-container {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 500px; /* Limit the width */
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Calculator Form Styling */
+.calculator-form {
+    margin-bottom: 20px;
+}
+
+.calculator-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    font-size: 1em;
+    background-color: #fff;
+}
+
+.calculator-form button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #00b3b3;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+.calculator-form button:hover {
+    background-color: #009999;
+}
+
+/* Result Section Styling */
+.result {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .calculator-container {
+        padding: 20px;
+    }
+    
+    .calculator-form input,
+    .calculator-form button {
+        font-size: 1em;
+    }
+    
+    .result {
+        font-size: 1em;
+    }
+}
