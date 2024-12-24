@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     color: #fff;
-    background-color: #ffffff; /* Set the default background to white */
+    background-color: #ffffff; /* Default background to white */
 }
 
 /* Hero Section Styles */
@@ -52,7 +52,7 @@ body {
 
 /* Title Styling */
 .hero-content h1 {
-    font-size: 6em;
+    font-size: 4em;
     font-weight: bold;
     margin-bottom: 20px;
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8); /* Adding shadow for contrast */
@@ -65,12 +65,20 @@ body {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Adding shadow for contrast */
 }
 
+/* Contact Details Styling */
+.hero-content .contact-details {
+    font-size: 1.5rem; /* Smaller font size */
+    color: #fff; /* White text */
+    margin-bottom: 20px; /* Add spacing below the contact details */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8); /* Text shadow for readability */
+}
+
 /* Call-to-Action Button */
 .cta-button {
     padding: 15px 30px;
     font-size: 1.2em;
     color: #fff;
-    background-color: #00b3b3; /* Same color for both buttons */
+    background-color: #00b3b3; /* Button color */
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -94,7 +102,7 @@ body {
     background-color: #ffffff; /* White background for services section */
 }
 
-/* Make sure all service items have consistent styling */
+/* Service Items Styling */
 .service-item {
     background: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
@@ -120,7 +128,6 @@ body {
     font-size: 1.2em;
 }
 
-/* Align Explore and Contact buttons in a straight line with the Go to Calculator button */
 .service-item a {
     display: block;
     text-align: center;
@@ -130,34 +137,6 @@ body {
     width: 100%;
     max-width: 300px; /* Ensure buttons are not too wide */
     margin-top: 15px; /* Spacing between button and text */
-}
-
-/* Position Explore button inside Investment Plans */
-.explore-btn {
-    padding: 15px 30px; /* Same size as Go to Calculator */
-    font-size: 1.2em;
-    color: #fff;
-    background-color: #00b3b3;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    text-transform: uppercase;
-    border-radius: 5px;
-    margin-top: 15px; /* Spacing between content and button */
-}
-
-/* Special position for Contact button inside Expert Advice */
-.contact-btn {
-    padding: 15px 30px; /* Same size as Go to Calculator */
-    font-size: 1.2em;
-    color: #fff;
-    background-color: #00b3b3;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    text-transform: uppercase;
-    border-radius: 5px;
-    margin-top: 15px; /* Spacing between content and button */
 }
 
 /* Media Queries for Responsiveness */
