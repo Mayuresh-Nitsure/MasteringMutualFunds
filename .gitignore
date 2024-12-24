@@ -1,0 +1,14 @@
+# Ignore node_modules folder
+node_modules/
+
+# Ignore logs
+*.log
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore video files in public/videos
+public/videos/
+
+# Keep mp4 files
+!*.mp4
